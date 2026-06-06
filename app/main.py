@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import fastapi
+
+if __name__ == "__main__":
+=======
 import uvicorn
 from src.config.config import app
 from src.config.config import APP_URL
