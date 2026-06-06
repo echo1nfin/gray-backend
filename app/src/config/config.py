@@ -2,9 +2,13 @@ import os
 import configparser
 from dotenv import load_dotenv
 from pathlib import Path
+from fastapi import FastAPI
+
+app = FastAPI()
 
 load_dotenv()
 # var_name = os.getenv("var_name")
+URL_UJIN = os.getenv("url_ujin")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CONFIG_FILE = BASE_DIR / "config.ini"
