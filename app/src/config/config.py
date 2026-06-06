@@ -9,6 +9,7 @@ app = FastAPI()
 load_dotenv()
 # var_name = os.getenv("var_name")
 URL_UJIN = os.getenv("url_ujin")
+APP_URL = os.getenv("app_url")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CONFIG_FILE = BASE_DIR / "config.ini"
