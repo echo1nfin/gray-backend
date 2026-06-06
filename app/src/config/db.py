@@ -13,16 +13,3 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
-
-@contextmanager
-def get_db_session():
-    """Контекстный менеджер для безопасной работы с БД."""
-    session = SessionLocal()
-    try:
-        yield session
-        session.commit()  
-    except Exception:
-        session.rollback() 
-        raise
-    finally:
-        session.close()    

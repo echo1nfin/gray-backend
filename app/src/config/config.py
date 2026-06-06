@@ -7,9 +7,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 load_dotenv()
-# var_name = os.getenv("var_name")
+
 URL_UJIN = os.getenv("url_ujin")
+SECRET_UJIN = os.getenv("secret_ujin")
 APP_URL = os.getenv("app_url")
+APP_PORT = os.getenv("app_port")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CONFIG_FILE = BASE_DIR / "config.ini"
