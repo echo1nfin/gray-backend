@@ -1,6 +1,10 @@
 import os
 import configparser
+from dotenv import load_dotenv
 from pathlib import Path
+
+load_dotenv()
+# var_name = os.getenv("var_name")
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 CONFIG_FILE = BASE_DIR / "config.ini"
